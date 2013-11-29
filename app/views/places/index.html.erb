@@ -1,5 +1,59 @@
-<ol>
+<div class="slide-front">
+  <header id="header" class="">
+    <h1 class="bg-0 text-top">Идеальное место для вашего события</h1>
+    <h2 class="bg-0 text-top-small">«Третье место» — сервис, где люди находят нужные им площадки,<br>а площадки находят творческое применение.</h2>
+  </header>
+</div>
+<div class="clear"></div>
+<div class="content">
+  <div class="left-bar">
+    <ul class="menu-left">
+      <li><h2 class="-bold">Параметры для поиска</h2></li>
+      <li><h2 class="-bold">Цена за час</h2></li>
+      <li class="price">До 1000 руб.</li>
+      <li class="price">От 1000 до 3000 руб.</li>
+      <li class="price">От 3000 руб.</li>
+      <li class="price"></li>
+    </ul>
+    <ul class="menu-left">
+      <li><h2 class="-bold">Тип проводимого события</h2></li>
+      <li class="price">Вечеринка</li>
+      <li class="price">Лекция</li>
+      <li class="price">Концерт</li>
+      <li class="price">Выставка</li>
+      <li class="price">Тренинг</li>
+      <li class="price">Фотосъемка</li>
+      <li class="price">Переговоры</li>
+      <li class="price">Видеопоказ</li>
+      <li class="price">Спорт и фитнес</li>
+    </ul>
+    <ul class="menu-left bg-0">
+      <li><h2 class="-bold">Количество участников</h2></li>
+      <li class="price">До 10 человек</li>
+      <li class="price">От 10 до 20 человек</li>
+      <li class="price">От 20 до 50 человек</li>
+      <li class="price">От 50 до 100 человек</li>
+      <li class="price">Больше 100 человек</li>
+    </ul>
+    <div class="left-bot-block">
+      <ul>
+        <li><a href="" style="font-weight: bold; font-family: 'catanu300'">О проекте</a></li>
+        <li><a href="" style="font-weight: bold; font-family: 'catanu300'">Контакты</a></li>
+        <li class="share">© 2013 Third Place</li>
+        <li class="share"><a href="" ><img src="http://placehold.it/35x35" alt="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a><a href="" class="share"><img src="http://placehold.it/35x35" alt="">&nbsp;</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="right-bar">
+    <h2 class="bg-0 -bold">Мы подобрали для вас «третьи места», где можно провести события разного формата</h2>
+    <% i = 0 %>
     <% @places.each do |place| %>
-        <li><%= place.name %></li>
+        <% i += 1 %>
+        <% if i % 2 == 1 %>
+            <div class="blocks-it"><img src="http://placehold.it/330x330" alt=""><span class="price-block"><span class="p"><%= place.price_per_hour.to_i.to_s.gsub(/(\d)(?=(\d\d\d)+(?!\d))/, "\\1 ") %></span><br><span class="p-m"> pуб. / час </span></span><h1 class="bot-title"><%= place.name %></h1><p class="icon-map"><%= place.address %></p></div>
+        <% else %>
+            <div class="blocks-it -end"><img src="http://placehold.it/330x330" alt=""><span class="price-block"><span class="p"><%= place.price_per_hour.to_i.to_s.gsub(/(\d)(?=(\d\d\d)+(?!\d))/, "\\1 ") %></span><br><span class="p-m"> pуб. / час </span></span><h1 class="bot-title"><%= place.name %></h1><p class="icon-map"><%= place.address %></p></div>
+        <% end %>
     <% end %>
-</ol>
+  </div>
+</div>
