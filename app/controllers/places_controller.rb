@@ -1,11 +1,15 @@
 class PlacesController < ApplicationController
   def index
     @places = Place.all
+    @events = Event.all
     # render text: @places.map{ |p| "#{p.id} -> #{p.name} -> #{p.address} -> #{p.price_per_hour.to_i.to_s.gsub(/(\d)(?=(\d\d\d)+(?!\d))/, "\\1 ")}"}.join('<br/>')
   end
 
   # /places/:id GET
   def show
+    unless @place = Place.where(id: params[:id]).first
+      render 'places/404', status: 404
+    end
   end
 
   # /places/new

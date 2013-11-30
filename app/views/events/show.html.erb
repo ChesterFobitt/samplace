@@ -18,7 +18,11 @@
     <ul class="menu-left">
       <li><h2 class="-bold">Тип проводимого события</h2></li>
       <% @events.each do |event| %>
-          <li class="price"><%= link_to event.name, event_path(event) %></li>
+          <% if event.id == params[:id].to_i %>
+              <li class="price"><%= link_to event.name, event_path(event), class: :yellow %></li>
+          <% else %>
+              <li class="price"><%= link_to event.name, event_path(event) %></li>
+          <% end %>
       <% end %>
     </ul>
     <ul class="menu-left bg-0">

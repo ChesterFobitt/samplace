@@ -58,6 +58,7 @@ Samplace::Application.routes.draw do
   # match ':controller(/:action(/:id))(.:format)'
 
   resources :places
+  resources :events
 
   root :to => 'places#index'
 end
