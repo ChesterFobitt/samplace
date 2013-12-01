@@ -28,7 +28,7 @@
     <ul class="menu-left">
       <li><h2 class="-bold">Оснащенность</h2></li>
       <% @facilities.each do |facility| %>
-          <li class="price"><%= link_to facility.name, facilities_path(facility) %></li>
+          <li class="price"><%= link_to facility.name, facility_path(facility) %></li>
       <% end %>
     </ul>
     <ul class="menu-left bg-0">

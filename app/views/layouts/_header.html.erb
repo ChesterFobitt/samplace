@@ -9,9 +9,8 @@
     <div class="right-head">
       <ul>
         <li><a href="" class="menu-item">+ Добавить место</a></li>
-        <li>
-          <%= link_to '+ Добавить событие', {controller: :events, action: :new}, class: 'menu-item' %>
-        </li>
+        <li><%= link_to '+ Добавить событие', {controller: :events, action: :new}, class: 'menu-item' %></li>
+        <li><%= link_to '+ Добавить оснащенность', {controller: :facilities, action: :new}, class: 'menu-item' %></li>
         <li><a href="" class="menu-item">Вход</a></li>
         <li><a href="" class="menu-item">Регистрация</a></li>
       </ul>

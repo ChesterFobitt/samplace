@@ -1,6 +1,6 @@
 class FacilitiesController < ApplicationController
   def index
-    render 'facilities/404'
+    @facilities = Facility.all
   end
 
   def show
@@ -14,7 +14,7 @@ class FacilitiesController < ApplicationController
   end
 
   def new
-    render 'facilities/404'
+    @facility = Facility.new
   end
 
   def edit
@@ -22,7 +22,23 @@ class FacilitiesController < ApplicationController
   end
 
   def create
-    render 'facilities/404'
+    @facility_post = params[:facility]
+    if @facility_post
+      @facility = Facility.new
+      @facility.name = @facility_post[:name]
+      @facility.save
+
+      if @facility.errors.empty?
+        #redirect_to facility_path @event
+        flash[:notice] = "Post successfully created"
+        redirect_to controller: :facilities, action: :index
+        #TODO redirect to facilities list
+      else
+        #TODO error here
+      end
+    else
+      render 'facilities/new'
+    end
   end
 
   def update

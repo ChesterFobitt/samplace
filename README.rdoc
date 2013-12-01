@@ -7,7 +7,7 @@
     <li>#TODO - html coding - inner place page</li>
     <li><del>#TODO - inner place validation</del></li>
     <li>#TODO - make relations and new entities</li>
-    <li>#TODO - facility entity</li>
+    <li><del>#TODO - facility entity</del></li>
     <li>#TODO - capacity entity</li>
     <li>#TODO - start and end time for place entity</li>
     <li><del>#TODO - event model</del></li>
@@ -17,4 +17,6 @@
     <li>#TODO - CRUD - facilities</li>
     <li>#TODO - add Disqus comments</li>
     <li>#TODO - image crop gem</li>
+    <li>#TODO - price filter</li>
+    <li>#TODO - capacity filter</li>
 </ol>

@@ -1,0 +1,8 @@
+<div class="content">
+  <p>Create new facility</p><br/>
+  <%= form_for @facility do |f| %>
+    <p>Facility name</p>
+    <p><%= f.text_field :name %></p><br/>
+    <p><%= f.submit 'Add new facility' %></p>
+  <% end %>
+</div>
