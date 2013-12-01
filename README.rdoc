@@ -12,7 +12,9 @@
     <li>#TODO - start and end time for place entity</li>
     <li><del>#TODO - event model</del></li>
     <li><del>#TODO - image model</del></li>
-    <li>CRUD - places</li>
-    <li>CRUD - events</li>
-    <li>CRUD - facilities</li>
+    <li>#TODO - CRUD - places</li>
+    <li>#TODO - CRUD - events</li>
+    <li>#TODO - CRUD - facilities</li>
+    <li>#TODO - add Disqus comments</li>
+    <li>#TODO - image crop gem</li>
 </ol>

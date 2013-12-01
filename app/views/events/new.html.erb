@@ -1,0 +1,8 @@
+<div class="content">
+  <p>Create new event</p><br/>
+  <%= form_for @event do |f| %>
+    <p>Event name: </p>
+    <p><%= f.text_field :name %></p><br/>
+    <p><%= f.submit 'Create new event' %></p>
+  <% end %>
+</div>

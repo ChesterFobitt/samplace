@@ -14,10 +14,12 @@ class PlacesController < ApplicationController
 
   # /places/new
   def new
+    render 'places/404', status: 404
   end
 
   # /places/:id/edit GET
   def edit
+    render 'places/404', status: 404
   end
 
   # /places POST
@@ -39,9 +41,11 @@ class PlacesController < ApplicationController
 
   # /places/:id PUT
   def update
+    render 'places/404', status: 404
   end
 
   # /places/:id DELETE
   def destroy
+    render 'places/404', status: 404
   end
 end
