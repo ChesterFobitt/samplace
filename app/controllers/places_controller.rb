@@ -2,6 +2,7 @@ class PlacesController < ApplicationController
   def index
     @places = Place.all
     @events = Event.all
+    @facilities = Facility.all
     # render text: @places.map{ |p| "#{p.id} -> #{p.name} -> #{p.address} -> #{p.price_per_hour.to_i.to_s.gsub(/(\d)(?=(\d\d\d)+(?!\d))/, "\\1 ")}"}.join('<br/>')
   end
 

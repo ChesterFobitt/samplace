@@ -59,6 +59,7 @@ Samplace::Application.routes.draw do
 
   resources :places
   resources :events
+  resources :facilities
 
   root :to => 'places#index'
 end

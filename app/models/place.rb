@@ -9,4 +9,5 @@ class Place < ActiveRecord::Base
 
   has_many :images
   has_and_belongs_to_many :events
+  has_and_belongs_to_many :facilities
 end

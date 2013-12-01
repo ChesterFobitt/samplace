@@ -5,6 +5,7 @@ class EventsController < ApplicationController
 
   def show
     @events = Event.all
+    @facilities = Facility.all
     if @event = Event.where(id: params[:id]).first
       @places = @event.places
     else

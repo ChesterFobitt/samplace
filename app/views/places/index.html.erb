@@ -21,6 +21,12 @@
           <li class="price"><%= link_to event.name, event_path(event) %></li>
       <% end %>
     </ul>
+    <ul class="menu-left">
+      <li><h2 class="-bold">Оснащенность</h2></li>
+      <% @facilities.each do |facility| %>
+          <li class="price"><%= link_to facility.name, facility_path(facility) %></li>
+      <% end %>
+    </ul>
     <ul class="menu-left bg-0">
       <li><h2 class="-bold">Количество участников</h2></li>
       <li class="price">До 10 человек</li>
